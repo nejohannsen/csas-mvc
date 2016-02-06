@@ -3,17 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
+    <title>Vault of Holding by CSAS</title>
+    @*Styles.Render("~/Content/css")*@
+    @Styles.Render("~/Content/scss1.css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/fontawesome")
 
 </head>
 <body>
     <div id="headerBar"></div>
     <div id="main">
-        <div id="sideBar"></div>
+        <div id="sideBar">
+            <div id="logo"></div>
+            <ul>
+                <li><a href="@Url.Action("Index", "home")"><i class="fa fa-home">Home</i></a></li>
+            </ul>
+            
+        </div>
         <div id="content">
-            @RenderBody();
+            @RenderBody()
         </div>
     </div>
 </body>
